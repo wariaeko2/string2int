@@ -13,5 +13,6 @@ import lombok.ToString;
 public class ResponseString2IntInfo extends ResponseInfo{
 	private static final long serialVersionUID = 4394837135283578727L;
 
-	private String intInfo;
+	private String intString;
+	private Integer pureInt;
 }
