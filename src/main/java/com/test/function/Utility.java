@@ -9,15 +9,11 @@ public class Utility {
 	public SeperateReq separateInt(String str, String convertFlag) {
 		SeperateReq resp = new SeperateReq();
 		String separateInt = str.replaceAll(separateIntRegex, "");
-		StringBuilder sb = new StringBuilder();
-		for (char chInt : separateInt.toCharArray()) {
-			sb.append(chInt);
-		}
 		
-		resp.setIntString(sb.toString());
+		resp.setIntString(separateInt);
 		
 		if("Y".equals(convertFlag)) {
-			resp.setPureInt(convertToInt(sb.toString()));
+			resp.setPureInt(convertToInt(separateInt));
 		}
 
 		return resp;
@@ -26,6 +22,5 @@ public class Utility {
 	public int convertToInt(String a) {
         int c = Integer.parseInt(a);
         return c;
-
 	}
 }
